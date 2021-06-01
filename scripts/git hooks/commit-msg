@@ -1,0 +1,19 @@
+#! C:\Python39\python.exe
+
+from os import sys
+
+def main():
+	commit_msg_file = sys.argv[1]
+
+	with open(commit_msg_file) as commit_msg:
+		contents = commit_msg.read()
+		word_count = len(contents.split(" "))
+		if word_count < 5:
+			print("Commit Failed: Commit messages must have 5 or more words. Clear commit messages are important.")
+			sys.exit(1)
+		else:
+			sys.exit(0)
+
+if __name__ == '__main__':
+	main()
+

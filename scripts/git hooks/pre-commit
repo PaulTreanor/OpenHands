@@ -1,0 +1,28 @@
+#! C:\Python39\python.exe
+
+from os import sys
+import subprocess
+import os 
+
+# Warn user that they have committed to master 
+def check_branch():
+	# Get branch name 
+	output = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'])
+	
+	# Convert git cmd output from bytes to str
+	branch = output.decode("utf-8") 
+	branch = branch.strip('\n')
+	if branch == 'master':
+		print("WARNING: You are about to commit to master branch.")
+	sys.exit(0)
+
+
+def run_tests():
+	# run all pytest tests detected in system - tests must be named *_test.py to be detected 
+	os.system('cmd /k "python -m pytest"')
+
+
+if __name__ == '__main__':
+	run_tests()
+	check_branch()
+
