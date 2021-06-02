@@ -1,6 +1,7 @@
+![artwork](static/artwork.png)
+![Version](https://img.shields.io/badge/Version-0.1.0-blue)
+ 
 # OpenHands 
-![Version](https://img.shields.io/badge/Version-0.1.0-blue) 
-
 OpenHands is a gesture recognition system powered by [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), k-nearest neighbours, and local outlier factor.  Currently the system can identify thumbs up, peace, palm, and out of distribution hand gestures of right hands. 
 
 ## :clapper:  Video demo
@@ -40,5 +41,5 @@ OpenHands uses the GPLv3 license. This means you are free to make copies, modify
 * Github: [@paultreanor](https://github.com/PaulTreanor)
 
 ## :clap:  Acknowledgements 
-Thanks to [Colin Gorman](https://ie.linkedin.com/in/colin-gorman-037b67181) for help with the dataset collection, dataset processing, and system testing.
-
+- Thanks to [Colin Gorman](https://ie.linkedin.com/in/colin-gorman-037b67181) for help with the dataset collection, dataset processing, and system testing.
+- Credit to [Róise McGagh](https://ie.linkedin.com/in/r%C3%B3ise-mcgagh) for the fantastic artwork!

@@ -1,6 +1,9 @@
 
 # Ignore everything in the build directory.
 build/
+# Except the readme
+!README.md
+
 
 # Do not store node modules in your repo.
 node_modules/
