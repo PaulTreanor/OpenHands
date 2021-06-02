@@ -40,5 +40,5 @@ OpenHands uses the GPLv3 license. This means you are free to make copies, modify
 * Github: [@paultreanor](https://github.com/PaulTreanor)
 
 ## :clap:  Acknowledgements 
-Thanks to [Colin Gorman](https://ie.linkedin.com/in/colin-gorman-037b67181) for help with the dataset collection, dataset processing, and system testing.
-
+- Thanks to [Colin Gorman](https://ie.linkedin.com/in/colin-gorman-037b67181) for help with the dataset collection, dataset processing, and system testing.
+- Credit to [Róise McGagh](https://ie.linkedin.com/in/r%C3%B3ise-mcgagh) for the fantastic artwork!
