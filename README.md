@@ -25,7 +25,6 @@ OpenHands began as a college project which meant that corners had to be cut due 
 	1. KNN approximations.
 	2. Keypoint dimension reduction.
 	3. Implement classifier in C. 
-* Linux/MacOS support.
 * Left hand gesture support. 
 * SDK for adding custom gestures. 
 
