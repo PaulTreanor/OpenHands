@@ -16,7 +16,7 @@ OpenHands is a gesture recognition system powered by [OpenPose](https://github.c
 ## :taxi:  Roadmap
 #### Short term
 1. Record more accuracy and performance metrics. 
-2. Implement github actions testing pipeline. 
+2. ~~Implement github actions testing pipeline. ~~
 3. Improve documentation. 
 
 #### Longer term 
