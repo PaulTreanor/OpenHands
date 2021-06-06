@@ -1,6 +1,6 @@
 import time 
 from knn import knn
-import conf_functions
+import confidence_functions
 
 # Measure the performance of algorithms for optimisations
 
@@ -14,7 +14,7 @@ def knn_profile(gesture_data, k):
 
 def Local_distance_outlier_factor_profile(nn):
 	start = time.perf_counter()											# Start timer 
-	local_distance_outlier_factor = conf_functions.get_conf_ldofs(nn)			# Run local distance outlier factor algorithm
+	local_distance_outlier_factor = confidence_functions.local_distance_outlier_factor(nn)			# Run local distance outlier factor algorithm
 	stop = time.perf_counter()											# Stop timer 
 	execution_time = stop-start 
 	return execution_time
@@ -23,7 +23,7 @@ def Local_distance_outlier_factor_profile(nn):
 def Local_outlier_factor_profile(A, nn, k):
 	classifier = knn(k)																# Set up KNN instance before timer starts to reduce noise
 	start = time.perf_counter()														# Start timer 
-	local_outlier_factor = conf_functions.get_conf_LoF(A, nn, classifier, k)		# Run local outlier factor algorithm
+	local_outlier_factor = confidence_functions.local_outlier_factor(A, nn, classifier, k)		# Run local outlier factor algorithm
 	stop = time.perf_counter()														# Start timer 
 	execution_time = stop-start 
 	return execution_time

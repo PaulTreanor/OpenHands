@@ -3,7 +3,7 @@ import os
 from data_transformer import translate, enlarge, rotate
 import time
 from knn import knn
-from conf_functions import library_local_outlier_factor, get_conf_LoF, get_conf_ldofs
+from confidence_functions import library_local_outlier_factor, local_outlier_factor, local_distance_outlier_factor
 import os
 import configparser
 import urllib.request
@@ -56,8 +56,8 @@ def processGestureData(gesture_data):
 def classify(gesture_data):
 	classifier = knn(k)
 	classification, nn = classifier.predict(gesture_data)
-	conf = get_conf_LoF(gesture_data[0], nn, classifier, k)  
-	#conf = get_conf_ldofs(nn)
+	conf = local_outlier_factor(gesture_data[0], nn, classifier, k)  
+	#conf = local_distance_outlier_factor(nn)
 	#lof = lib_lof()
 	#conf = lof.decision_function(gesture_data)[0]
 	return classification, conf

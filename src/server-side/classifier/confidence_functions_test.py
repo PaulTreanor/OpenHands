@@ -1,6 +1,6 @@
 import pytest 
 from knn import knn
-import conf_functions
+import confidence_functions
 from pytest import ExitCode
 # python -m pytest .\conf_function_test.py 
 
@@ -22,18 +22,18 @@ def get_A():
 
 
 # Testing if kth nearest neighbours is correctly implemented
-def test_conf_kth_nn(get_neighbours_list):
-	confidence = conf_functions.get_conf_kth_nn(get_neighbours_list)
+def test_KthNN_confidence(get_neighbours_list):
+	confidence = confidence_functions.KthNN_confidence(get_neighbours_list)
 	assert confidence == 32.16324240495663
 
 # Testing if k nearest neighbours for anomoly detection is correctly implemented
-def test_conf_k_nn(get_neighbours_list):
-	confidence = conf_functions.get_conf_knn(get_neighbours_list)
+def test_KNN_confidence(get_neighbours_list):
+	confidence = confidence_functions.KNN_confidence(get_neighbours_list)
 	assert confidence == 29.398073076185863
 
 # Testing if local distance outlier factor is correctly implemented 
 def test_conf_ldofs(get_neighbours_list):
-	confidence = conf_functions.get_conf_ldofs(get_neighbours_list)
+	confidence = confidence_functions.local_distance_outlier_factor(get_neighbours_list)
 	assert confidence == 8.082030372281343
 
 #################### LOCAL OUTLIER FACTOR ALGORITHM FUNCTION TESTS ##################
@@ -45,7 +45,7 @@ def test_ReachableDistance(get_neighbours_list, get_A):
 	B = get_neighbours_list[0]
 	k = 5
 	classifier = knn(k)
-	r_distance = conf_functions.rDistance(A, B, classifier, k)
+	r_distance = confidence_functions.rDistance(A, B, classifier, k)
 	assert r_distance == 45.454979859196946
 
 def test_local_r_density(get_neighbours_list, get_A):
@@ -53,6 +53,6 @@ def test_local_r_density(get_neighbours_list, get_A):
 	A = get_A
 	k = 5	# Number of nearest neighbours A is compared to
 	classifier = knn(k)
-	local_reachability_distance = conf_functions.local_r_density(A, nearest_neighbours, classifier, k)
+	local_reachability_distance = confidence_functions.local_r_density(A, nearest_neighbours, classifier, k)
 	assert round(local_reachability_distance, 5) == round(0.014146622167822212,5)
 
