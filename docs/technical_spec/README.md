@@ -198,17 +198,13 @@ The KNN, KthNN,local distance outlier factor, and local outlier factor algorithm
 ##### Local outlier factor implementation
 Local outlier factor is an anomaly detection algorithm which compares the local density of the item being classified with the local density of each of the item’s k nearest neighbours. Density is the average distance between items in an area (in this case, the area is the radius around an item which includes the k nearest neighbours). If the local density of an item is considerably less than the local density of an item’s neighbours, then the item is considered to be an outlier. If an item is an outlier then there is less confidence that it has the same classification as its k nearest neighbours, and so it is classified as being out-of-distribution.
   
-The implementation of the LOF was developed based on the mathematical notation representation from the Breunig and Kriegal 2000 study which proposed the algorithm [3].
-
-The implementation of local outlier factor can be found in conf_functions.py. Local outlier factor is based on the concepts of reachability distance and local reachability-density.
+The implementation of the LOF was developed based on the mathematical notation representation from the Breunig and Kriegal 2000 study which proposed the algorithm [3]. The code can be found in `conf_functions.py`. 
 
 This implementation of LOF takes 4 arguments:
 - A (the item to be classified, as a list of features)
 - a list of A's nearest neighbours
 - an instance of the KNN classifier
 - a value for K
-
-The [OpenHands project](https://github.com/PaulTreanor/openhands) implements LOF in this way.
 
 The algorithm is split into 3 methods corrosponding to the 3 maths functions from the algorithm's Wikipedia page. 
 
