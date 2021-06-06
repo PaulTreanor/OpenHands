@@ -7,15 +7,15 @@
         <b-container class="pointers text-center">
             <p>Use gestures to control the camera!</p>
             <b-row class="d-flex justify-content-center">
-                <a id="photo"  class="gesture">
+                <a id="photo"  class="col gesture">
                     <i class="icon far fa-hand-peace fa-2x"></i>
                     <p>Photo</p>
                 </a>
-                <a id="record"  class="gesture">
+                <a id="record"  class="col gesture">
                     <i class="icon far fa-thumbs-up fa-2x"></i>
                     <p>Start</p>
                 </a>
-                <a id="stop"  class="gesture">
+                <a id="stop"  class="col gesture">
                     <i class="icon far fa-hand-paper fa-2x"></i>
                     <p>Stop</p>
                 </a>
@@ -73,7 +73,7 @@ export default {
         });
 
         function snapCanvas(){
-            context.drawImage(preview, 0, 0, 480,  640);
+            context.drawImage(preview, 0, 0, 640,  480);
         }
     
         // ------------- MEDIA STREAM FUNCTIONS ---------------//
