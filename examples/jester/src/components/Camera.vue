@@ -73,7 +73,7 @@ export default {
         });
 
         function snapCanvas(){
-            context.drawImage(preview, 0, 0, 480,  640);
+            context.drawImage(preview, 0, 0, 640,  480);
         }
     
         // ------------- MEDIA STREAM FUNCTIONS ---------------//
