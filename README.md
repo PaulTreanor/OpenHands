@@ -1,11 +1,11 @@
 ![artwork](static/artwork.png)
-![Version](https://img.shields.io/badge/Version-0.1.1-blue)
+![Version](https://img.shields.io/badge/Version-0.1.2-blue)
  
 # OpenHands 
 OpenHands is a gesture recognition system powered by [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose), k-nearest neighbours, and local outlier factor.  Currently the system can identify thumbs up, peace, palm, and out of distribution hand gestures of right hands. 
 
 ## :clapper:  Video demo
-[Watch a demo](https://www.youtube.com/watch?v=QSDZ-cdyGXw) of OpenHands being used in the camera web app Jester (app code in /examples).
+[Watch a demo](https://www.youtube.com/watch?v=QSDZ-cdyGXw) of OpenHands being used in the camera web app Jester (app code in /examples directory).
 
 ## :memo:  Documentation
 * [Installation instructions](https://github.com/PaulTreanor/OpenHands/blob/main/docs/installation.md)
@@ -13,11 +13,9 @@ OpenHands is a gesture recognition system powered by [OpenPose](https://github.c
 * [Testing report](https://github.com/PaulTreanor/OpenHands/blob/initial-commits/docs/testing_report.pdf)
 
 ## :taxi:  Roadmap
-OpenHands began as a college project which meant that corners had to be cut due to time constraints. There's still quite a bit of work to do, but I'd like to have a version 1.0 released for August 2021.
-
 #### Short term
-1. Record more classifier metrics. 
-2. Implement github actions CI/CD pipeline. 
+1. Record more accuracy and performance metrics. 
+2. Implement github actions testing pipeline. 
 3. Improve documentation. 
 
 #### Longer term 
