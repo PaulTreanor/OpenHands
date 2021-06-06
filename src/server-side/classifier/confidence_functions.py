@@ -16,20 +16,20 @@ def library_local_outlier_factor():
 ############# SIMPLE KNN ANOMOLY DETECTION ALGORITHMS #####################
 
 # Find confidence by looking at average distance to nearest neighbours 
-def get_conf_knn(nearest_neighbours):
+def KNN_confidence(nearest_neighbours):
 	distances = [item[0] for item in nearest_neighbours]
 	avg_dist = sum(distances)/len(distances)
 	return avg_dist
 
-def get_conf_kth_nn(nearest_neighbours):
+def KthNN_confidence(nearest_neighbours):
 	distances = [item[0] for item in nearest_neighbours]
 	return max(distances)
 
 ############# LDoF ALGORITHM #####################
 
 # Local distance outlier factor has max accuracy (90% ood detection) when min_conf = -25
-def get_conf_ldofs(nearest_neighbours):
-	knn_avg = get_conf_knn(nearest_neighbours)
+def local_distance_outlier_factor(nearest_neighbours):
+	knn_avg = KNN_confidence(nearest_neighbours)
 	knn_inner_distances = []
 	for item in nearest_neighbours:
 		neighbours = [line[0] for line in nearest_neighbours if line != item]
@@ -61,8 +61,8 @@ def local_r_density(A, nearest_neighbours, classifier, k):
 	local_r_density = 1.0/avg_r_distance 
 	return local_r_density
 
-# Find confidence based on local outlier factor anomoly detection
-def get_conf_LoF(A, nearest_neighbours, classifier, k):
+# Find confidence based on local outlier factor (LOF) anomoly detection
+def local_outlier_factor(A, nearest_neighbours, classifier, k):
 	A_local_r_density = local_r_density(A, nearest_neighbours, classifier, k)
 	local_r_density_list = []
 	for B in nearest_neighbours:
@@ -71,8 +71,8 @@ def get_conf_LoF(A, nearest_neighbours, classifier, k):
 		local_r_density_list.append(B_local_r_density)
 	local_r_density_total = sum(local_r_density_list)
 	divisor = A_local_r_density*k
-	local_outlier_factor = local_r_density_total/divisor
-	local_outlier_factor = -local_outlier_factor
-	return local_outlier_factor
+	LOF_value = local_r_density_total/divisor
+	LOF_value = -LOF_value
+	return LOF_value
 
 
