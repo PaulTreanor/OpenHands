@@ -9,9 +9,9 @@ OpenHands is a gesture recognition system powered by [OpenPose](https://github.c
 [Watch a demo](https://www.youtube.com/watch?v=QSDZ-cdyGXw) of OpenHands being used in the camera web app Jester (app code in /examples directory).
 
 ## :memo:  Documentation
-* [Installation](https://github.com/PaulTreanor/OpenHands/blob/main/docs/installation.md)
+* [Installation](docs/installation.md)
 * [Technical specification](docs/technical_spec)
-* [Testing report](https://github.com/PaulTreanor/OpenHands/blob/initial-commits/docs/testing_report.pdf)
+* [Testing report](testing_report.pdf)
 
 ## :taxi:  Roadmap
 #### Short term
