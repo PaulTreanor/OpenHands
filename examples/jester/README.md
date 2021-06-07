@@ -1,7 +1,12 @@
 # Jester
 Jester is a web app which uses OpenHands to allow users to control their device's camera using 
 
-## Project setup
+# How it works 
+![sequence](images/sequence.png)
+![dataflow](images/dataflow.png)
+![architecture](images/architecture.png)
+
+# Project setup
 ```
 npm install
 ```
@@ -15,11 +20,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
