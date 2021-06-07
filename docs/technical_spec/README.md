@@ -169,7 +169,7 @@ A potential reason why low values were more accurate is because the training and
 
 ```python
 def knn_classifier(inputItem):
-	nearest_neighbours = []  // list of tuples (item, distance)
+	nearest_neighbours = []  # list of tuples (item, distance)
 	for item in trainingSet 
 		distance = getDistance(inputItem, item)
 		if length(nearest_neighbours) < k:
